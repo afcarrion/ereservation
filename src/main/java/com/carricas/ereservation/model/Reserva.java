@@ -21,9 +21,9 @@ import lombok.Data;
  * @author freehyoga
  *
  */
+@Data
 @Entity
 @Table(name="reserva")
-@Data
 public class Reserva {
 	@Id
 	@GeneratedValue(generator="system-uuid")
@@ -34,6 +34,6 @@ public class Reserva {
 	private int cantidadPersonaRes;
 	private String descripcionRes;
 	@ManyToOne
-	@JoinColumn(name="idCli;")
+	@JoinColumn(name="idCli")
 	private Cliente cliente;
 }
