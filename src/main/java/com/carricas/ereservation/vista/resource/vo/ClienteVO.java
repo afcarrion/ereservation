@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.carricas.ereservation.model;
+package com.carricas.ereservation.vista.resource.vo;
 
 import java.util.Set;
 
@@ -22,14 +22,8 @@ import lombok.Data;
  *
  */
 @Data
-@Entity
-@Table(name = "cliente")
-@NamedQuery(name="Cliente.findByIdentificacion", query="Select c from Cliente c where c.identificacionCli = ?1")
-public class Cliente {
-	@Id
-	@GeneratedValue(generator="system-uuid")
-	@GenericGenerator(name="system-uuid", strategy="uuid2")
-	private String idCli;
+public class ClienteVO {
+	
 	private String nombreCli;
 	private String apellidoCli;
 	private String identificacionCli;
@@ -37,10 +31,4 @@ public class Cliente {
 	private String telefonoCli;
 	private String emailCli;
 	
-	@OneToMany(mappedBy="cliente")
-	private Set<Reserva> reservas;
-	
-	public Cliente() {
-		
-	}
 }

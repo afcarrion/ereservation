@@ -3,6 +3,8 @@
  */
 package com.carricas.ereservation.negocio.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -53,7 +55,11 @@ public class ClienteService {
 	 * @param identificacion
 	 * @return
 	 */
-	public Cliente finByIdentificacion(String identificacion) {
+	public Cliente findByIdentificacion(String identificacion) {
 		return this.clienteRepository.findByIdentificacion(identificacion);
+	}
+	
+	public List<Cliente> findAll(){
+		return this.clienteRepository.findAll();
 	}
 }

@@ -3,7 +3,6 @@ package com.carricas.ereservation.negocio.repository;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import com.carricas.ereservation.model.Cliente;
 
 /**
@@ -20,7 +19,12 @@ public interface ClienteRepository extends JpaRepository<Cliente, String>{
 	 * @return
 	 */
 	public List<Cliente> findByApellidoCli(String apellidoCli);
-	
+	/**
+	 * Definición de método para buscar un cliente por su identificación
+	 * @param identificacionCli
+	 * @return
+	 */
 	public Cliente findByIdentificacion(String identificacionCli);
-
+	
+	public List<Cliente> findAll();
 }
