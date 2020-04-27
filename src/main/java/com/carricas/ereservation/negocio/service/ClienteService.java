@@ -54,6 +54,6 @@ public class ClienteService {
 	 * @return
 	 */
 	public Cliente finByIdentificacion(String identificacion) {
-		return this.clienteRepository.finByIdentificacion(identificacion);
+		return this.clienteRepository.findByIdentificacion(identificacion);
 	}
 }

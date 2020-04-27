@@ -21,6 +21,6 @@ public interface ClienteRepository extends JpaRepository<Cliente, String>{
 	 */
 	public List<Cliente> findByApellidoCli(String apellidoCli);
 	
-	public Cliente finByIdentificacion(String identificacionCli);
+	public Cliente findByIdentificacion(String identificacionCli);
 
 }
